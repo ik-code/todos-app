@@ -57,4 +57,12 @@ class TodosController extends Controller {
 
         return redirect('/todos');
     }
+    public function complete(Todos $todo){
+        $todo->completed = true;
+        $todo->update();
+
+        session()->flash('success', 'Todo completed successfully');
+
+        return redirect('/todos');
+    }
 }
