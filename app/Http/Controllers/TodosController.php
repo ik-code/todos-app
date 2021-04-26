@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Todos;
-use Illuminate\Http\Request;
+
 
 class TodosController extends Controller {
     public function index() {
@@ -17,6 +17,10 @@ class TodosController extends Controller {
         return view('todos.create');
     }
     public function store(){
+        $this->validate( request(), [
+            'name' => 'required|unique:todos|max:255',
+            'description' => 'required'
+        ]);
         $data = request()->all();
         $todo = new Todos();
         $todo->name = $data['name'];
