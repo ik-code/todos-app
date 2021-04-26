@@ -35,10 +35,21 @@
 
 
 <div class="container">
+
+    @if(session()->has('success'))
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="alert alert-success" role="alert">
+                    {{ session()->get('success') }}
+                </div>
+            </div>
+        </div>
+    @endif
     @yield('content')
 </div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"  crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"  crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
 </body>
 </html>
