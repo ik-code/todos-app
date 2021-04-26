@@ -15,6 +15,7 @@
                     <li class="list-group-item text-center">
                         <a href="/todos" type="button" class="btn btn-primary btn-sm">Go Back</a>
                         <a href="/todos/{{ $todo->id }}/edit" type="button" class="btn btn-info btn-sm">Edit</a>
+                        <a href="/todos/{{ $todo->id }}/delete" type="button" class="btn btn-danger btn-sm">Delete</a>
                     </li>
                 </ul>
             </div>
