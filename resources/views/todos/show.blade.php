@@ -12,8 +12,10 @@
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item"><h5 class="text-center">Details</h5></li>
                     <li class="list-group-item">{{ $todo->description }}</li>
-                    <li class="list-group-item text-center"><a href="/todos" type="button"
-                                                   class="btn btn-primary btn-sm">Go Back</a></li>
+                    <li class="list-group-item text-center">
+                        <a href="/todos" type="button" class="btn btn-primary btn-sm">Go Back</a>
+                        <a href="/todos/{{ $todo->id }}/edit" type="button" class="btn btn-info btn-sm">Edit</a>
+                    </li>
                 </ul>
             </div>
         </div>
